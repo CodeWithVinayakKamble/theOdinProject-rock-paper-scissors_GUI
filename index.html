@@ -34,47 +34,47 @@
     <main class="game-board">
         <div class="game-board__container">
 
-            <section class="game-board__instruction" aria-labelledby="instruction-title">
-                <h2 class="game-board__heading" id="instruction-title">Choose Your Play</h2>
-                <p class="game-board__subheading">First to Score 5 Points Wins</p>
+            <section class="game-board__instruction" aria-labelledby="instructionTitle">
+                <h2 class="game-board__heading" id="instructionTitle">Choose Your Play</h2>
+                <p class="game-board__subheading" id="subInstructionTitle">First to Score 5 Points Wins</p>
             </section>
 
             <section class="scoreboard" aria-label="Scoreboard">
 
-                <div class="scoreboard__card scoreboard__card--human">
+                <div class="scoreboard__card" id="human">
                     <div class="scoreboard__avatar-wrapper">
-                        <img class="scoreboard__avatar" src="assets/idel_score-mark.png" alt="">
+                        <img id="humanSelection" class="scoreboard__avatar" src="assets/idel_score-mark.png" alt="">
                     </div>
                     <p class="scoreboard__text">Human :
                         <span id="humanScore" class="scoreboard__value">0</span>
                     </p>
                 </div>
 
-                <div class="scoreboard__card scoreboard__card--computer">
+                <div class="scoreboard__card" id="computer">
                     <div class="scoreboard__avatar-wrapper">
-                        <img class="scoreboard__avatar" src="assets/idel_score-mark.png" alt="">
+                        <img id="computerSelection" class="scoreboard__avatar" src="assets/idel_score-mark.png" alt="">
                     </div>
-                    <p class="scoreboard__text">Computer : <span id="computerScore"
-                            class="scoreboard__value">0</span>
+                    <p class="scoreboard__text">Computer : <span id="computerScore" class="scoreboard__value">0</span>
                     </p>
                 </div>
+
             </section>
 
             <div class="game-controls" role="group" aria-label="Game Options">
 
                 <button type="button" id="rock" class="game-controls__btn game-controls__btn--rock"
                     aria-label="Choose Rock">
-                    <img class="game-controls__img" src="assets/select_rock.png" alt="">
+                    <img class="game-controls__img" src="assets/select_rock.png" alt="" title="rock">
                 </button>
 
                 <button type="button" id="paper" class="game-controls__btn game-controls__btn--paper"
                     aria-label="Choose Paper">
-                    <img class="game-controls__img" src="assets/select_paper.png" alt="">
+                    <img class="game-controls__img" src="assets/select_paper.png" alt="" title="paper">
                 </button>
 
                 <button type="button" id="scissors" class="game-controls__btn game-controls__btn--scissors"
                     aria-label="Choose Scissors">
-                    <img class="game-controls__img" src="assets/select_scissors.png" alt="">
+                    <img class="game-controls__img" src="assets/select_scissors.png" alt="" title="scissors">
                 </button>
 
             </div>
@@ -87,6 +87,14 @@
         <p class="attribution__author">Designed and Developed by Vinayak Kamble</p>
     </footer>
 
+
+    <!-- End of Game Modal Overlay -->
+    <div id="gameOverModal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal__card">
+            <h2 id="modalTitle" class="modal__title">You Won!</h2>
+            <button type="button" id="modalResetBtn" class="modal__btn">Play Again</button>
+        </div>
+    </div>
 </body>
 
 </html>
